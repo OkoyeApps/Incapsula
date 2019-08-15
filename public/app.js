@@ -1,0 +1,1 @@
+angular.module("incapsula", ["maincontroller", "authcontroller", "route"]).config(function () { console.log("in the app file") });

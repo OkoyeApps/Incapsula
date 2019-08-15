@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>{{title}}</title>
+    <!-- Favicon-->
+    <link rel="icon" href="~/Content/Assest/favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet"
+        type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap Core Css -->
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Waves Effect Css -->
+    <link href="/assets/css/waves.css" rel="stylesheet" />
+
+    <!-- Animation Css -->
+    <link href="/assets/css/animate.css" rel="stylesheet" />
+
+    <!-- Custom Css -->
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <link href="/assets/css/themes/all-themes.css" rel="stylesheet" />
+
+    <!-- Angular files -->
+    <script src="/assets/js/angular.js"></script>
+    <script src="/assets/js/angular-route.js"></script>
+    <script src="/app.js"></script>
+    <script src="/routes.js"></script>
+    <script src="/requestprocessor.js"></script>
+
+<body ng-app="railline">
+
+    <div class="login-page">
+        <div class="login-box">
+            <div class="logo">
+                <a href="javascript:void(0);">Tenece Incapsula <b>Report System</b></a>
+                @*<small>Admin BootStrap Based - Material Design</small>*@
+            </div>
+            <div class="card">
+                <div class="body">
+                    @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post,
+                    new {
+                    @class = "", id= "sign_in", role = "form" }))
+                    {
+                    @Html.AntiForgeryToken()
+                    <div class="msg">Sign in to start your session</div>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">person</i>
+                        </span>
+                        <div class="form-line">
+                            <input type="text" class="form-control" name="Email" placeholder="Username" required
+                                autofocus>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">lock</i>
+                        </span>
+                        <div class="form-line">
+                            <input type="password" class="form-control" name="Password" placeholder="Password" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-8 p-t-5">
+                            <input type="checkbox" name="RememberMe" id="rememberme" class="filled-in chk-col-pink">
+                            <label for="rememberme">Remember Me</label>
+                        </div>
+                        <div class="col-xs-4">
+                            <button class="btn btn-block bg-pink waves-effect" type="submit">SIGN IN</button>
+                        </div>
+                    </div>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <!-- Jquery Core Js -->
+        <script src="assets/js/jquery.min.js"></script>
+
+        <!-- Bootstrap Core Js -->
+        <script src="assets/js/bootstrap.js"></script>
+
+        <!-- Waves Effect Plugin Js -->
+        <script src="assets/js/waves.js"></script>
+
+        <!-- Validation Plugin Js -->
+        <script src="assets/js/jquery.validate.js"></script>
+
+        <!-- Custom Js -->
+        <script src="assets/js/admin.js"></script>
+        <script src="assets/js/sign-in.js"></script>
+    </div>
+</body>
+
+</html>
